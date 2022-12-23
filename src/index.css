@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .App{@apply bg-main-bg-color text-dirty-white  }
+    .Main{@apply max-w-6xl mx-auto  text-xl}
+    html{
+        scroll-behavior: smooth;
+    }
+}
+
+@layer utilities {
+    /* NavBar */
+    .Nav-container{@apply z-20 flex overflow-hidden fixed rounded-full  bottom-0 -translate-y-10 backdrop-blur-md bg-black/20 left-1/2 -translate-x-1/2 gap-5 py-2}
+    .Nav-icons{@apply px-3 py-2 text-3xl text-dirty-white cursor-pointer hover:text-regal-blue}
+
+    /* Main button shema */
+    .Base-button{@apply py-3 px-5 rounded-md border-2 border-regal-blue mx-5 hover:bg-regal-blue hover:text-dirty-white}
+
+    /* Flex's center */
+    .Flex-center{@apply flex flex-col items-center bottom-0}
+
+    .Boxer{@apply Flex-center bg-regal-blue px-5 py-7 rounded-md text-dirty-white}
+    .Bottom-spacer{@apply bottom-20}
+
+    .Social-item{@apply text-xl mt-5}
+
+    /* Contack items */
+    .MessageBox{@apply Flex-center w-full  p-8 bg-regal-blue rounded-xl gap-2}
+    .MessageInput{@apply rounded-lg py-3 px-5 bg-transparent border-l-2 border-r-2  focus:outline-none focus:border-2 border-regal-blue}
+}
